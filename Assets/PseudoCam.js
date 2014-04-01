@@ -30,9 +30,9 @@ function RefreshQuadScreen(){
 
 function Update () {
 	if(ready){
-		//if(Input.GetMouseButtonDown(0)){
-		//	outs = TakeImage();
-		//}
+		if(Input.GetMouseButtonDown(0)){
+			outs = TakeImage();
+		}
 	}	
 	if(succeeded){
 		var i: int;

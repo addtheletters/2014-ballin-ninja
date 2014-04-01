@@ -16,15 +16,18 @@ var phi		: double; //x rotation
 
 var filename : String;
 
+var TRIGGERKEY : String;
+
 function Start () {
 	if(PHISTEP == 0) 	PHISTEP 	= 1;
 	if(THETASTEP == 0) 	THETASTEP 	= 1;
 	filename = "data.txt";
 	pseudoCam = GetComponent("PseudoCam") as PseudoCam;
+	TRIGGERKEY = "d";
 }
 
 function Update () {
-	if(Input.GetMouseButtonDown(1)){
+	if(Input.GetKeyDown(TRIGGERKEY)){
 		CalculateAndPrintData();
 	}
 }
