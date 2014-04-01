@@ -53,8 +53,8 @@ var computeData = function(data) {
 	var rb = p24/p34;
 	var omega = p14+p23;
 	var dist = 10*Math.sqrt(185)/omega;
-    var theta=Math.asin(1/(rb*11/8))*(rl>0)?1:-1;
-    var phi = Math.asin(1/(tl*8/11))*(tb>0)?1:-1;
+    var theta=Math.asin(1/(rb*11/8))*(rl>1)?1:-1;
+    var phi = Math.asin(1/(tl*8/11))*(tb>1)?1:-1;
 
 	return phi+" "+theta+" "+dist;
 
