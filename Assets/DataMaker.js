@@ -54,7 +54,7 @@ static function RoundData(data: double[], digits: int ){
 	}
 }
 
-static function GetData( points : Vector3[] ){
+static function GetOrderedPoints( points : Vector3[] ){
 	var ordered: Vector3[] = new Vector3[4];
 	var min1: double = 999999999;
 	var min2: double = min1;
@@ -101,6 +101,12 @@ static function GetData( points : Vector3[] ){
 		ordered[3]=points[pos4];
 		ordered[1]=points[pos3];
 	}
+	return ordered;
+}
+
+static function GetData( points : Vector3[] ){
+	var ordered : Vector3[] = GetOrderedPoints(points);
+	
 	var toplen 		: double = Vector3.Distance(ordered[0], ordered[1]);
 	var bottlen 	: double = Vector3.Distance(ordered[2], ordered[3]);
 	var leftlen 	: double = Vector3.Distance(ordered[0], ordered[2]);

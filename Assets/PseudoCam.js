@@ -5,8 +5,10 @@ var outs 	: Vector3[];
 var quadScreen 		: GameObject;
 var rayInterceptor	: GameObject;
 
-var ready		: boolean;
-var succeeded	: boolean;
+var bstNotThatOne : BisectTester;
+
+private var ready		: boolean;
+private var succeeded	: boolean;
 //assumes camera is centered relative to the image it's taking
 //and some units away in the z direction from the image
 
